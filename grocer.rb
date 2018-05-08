@@ -18,9 +18,10 @@ coupons.each do |coupon|
   coupon_name = coupon[:item]
   if cart[coupon_name] && cart[coupon_name][:count] >= coupon[:num]
     if cart["#{coupon_name} W/COUPON"]
-cart["#{coupon_name} W/COUPON"][:count] +=1
+cart["#{coupon_name} W/COUPON"][:count] += 1
+
 else
-  cart["#{coupon_name} W/COUPON"] = {:price => coupon[:cost],:count => 1, :clearance => cart[coupon_name[:clearance]]}
+  cart["#{coupon_name} W/COUPON"] = {:price => coupon[:cost],:count => 1, :clearance => cart[coupon_name[:clearance]}
 end
 cart[coupon_name][:count] -= coupon[:num]
 end
