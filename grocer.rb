@@ -6,6 +6,7 @@ def consolidate_cart(cart)
       item_info[:count] +=1
       value[item]=item_info
     end
+    end
   end
 end
 
