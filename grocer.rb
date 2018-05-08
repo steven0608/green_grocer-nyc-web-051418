@@ -2,12 +2,12 @@ def consolidate_cart(cart)
   # code here
   cart.each_with_object({}) do |key,value|
     key.each do |item,item_info|
-      if value[item]
+      # if value[item]
       item_info[:count] +=1
     # else
     #
     #   value[item]=item_info
-    end
+    # end
     end
   end
 end
